@@ -6,6 +6,17 @@ ruby '2.7.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.6'
 
+gem 'mini_racer'
+  
+group :development, :test do
+  gem 'rspec-rails', '~> 3.7'
+end
+
+group :development, :test do
+  gem 'capybara', '>= 2.15'
+end
+
+gem 'simplecov', require: false, group: :test
 
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
