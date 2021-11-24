@@ -7,6 +7,10 @@ ruby '2.7.0'
 gem 'rails', '~> 5.2.6'
 
 gem 'mini_racer'
+
+gem 'devise'
+
+gem 'factory_bot_rails'
   
 group :development, :test do
   gem 'rspec-rails', '~> 3.7'
