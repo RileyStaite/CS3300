@@ -11,7 +11,6 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
     <link rel="canonical" href="https://getbootstrap.com/docs/3.4/examples/cover/">
 
     <title>Riley Staite Portfolio</title>
@@ -42,7 +41,7 @@
 
           <div class="masthead clearfix">
             <div class="inner">
-              <h3 class="masthead-brand">Riley Staite's Portfolio</h3>
+              <h3 class="masthead-brand">Portfolio</h3>
               <nav>
                 <ul class="nav masthead-nav">
                   <li class="active"><a href="/">Home</a></li>
@@ -59,24 +58,36 @@
             <h1 class="cover-heading">Projects</h1>
             <% @projects.each do |project| %>
               <tr>
-              <p class="lead"><td><%= project.title %></td></p>
-                <td><%= project.description %></td>
-                <div class="btn btn-sm btn-default">
+              <div class="card" style="width: 36rem;">
+              <div class="card-body">
+              <h5 class="card-title"><p class="lead"><td><%= project.title %></td></p></h5>
+              <p class="card-text"><td><%= project.description %></td></p>
+              <div class="btn btn-sm btn-default">
                   <td><%= link_to 'Show', project %></td>
                 </div>
                 <div class="btn btn-sm btn-default">
-                  <td><%= link_to 'Edit', edit_project_path(project) %></td>
-                </div>
-                <div class="btn btn-sm btn-default">
-                  <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-                </div>
+                <td><%= link_to 'Edit', edit_project_path(project) %></td>
+              </div>
+              <div class="btn btn-sm btn-default">
+                <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </div>
+              </div>
+              </div>
+
+              
+                
+               
+                
                 </tr>
             <% end %>
           </tbody>
+          <br>
+          <br>
+          <%= link_to 'New Project', new_project_path %>
           </div>
 
           <div class="mastfoot">
-          <%= link_to 'New Project', new_project_path %>
+          
             <div class="inner">
               <p>Portfolio by Riley Staite <a href="https://github.com/RileyStaite">Github</a></p>
             </div>
