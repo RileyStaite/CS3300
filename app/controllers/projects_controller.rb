@@ -6,9 +6,6 @@ class ProjectsController < ApplicationController
     @projects = Project.all
   end
 
-  def about
-  end
-
   # GET /projects/1 or /projects/1.json
   def show
   end
@@ -67,6 +64,6 @@ class ProjectsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def project_params
-      params.require(:project).permit(:title, :description)
+      params.require(:project).permit(:title, :description, :descriptionMore)
     end
 end

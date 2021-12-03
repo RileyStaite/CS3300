@@ -7,5 +7,13 @@ Rails.application.routes.draw do
   devise_for :users
   root "projects#index"
   resources :projects
-  get 'projects/about', to: 'projects#about'
+  get '/about', to: 'projects#about'
+
+  devise_scope :user do
+    get "register", to: "devise/registrations#new"
+    get 'login', to: 'devise/sessions#new'
+    get "logout", to: "devise/sessions#destroy"
+  end
+
 end
+

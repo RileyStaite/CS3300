@@ -14,7 +14,7 @@
     <link rel="icon" href="../../favicon.ico">
     <link rel="canonical" href="https://getbootstrap.com/docs/3.4/examples/cover/">
 
-    <title>Riley Staite Portfolio</title>
+    <title>About Riley</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
@@ -42,27 +42,27 @@
 
           <div class="masthead clearfix">
             <div class="inner">
-              <h3 class="masthead-brand">Programming Portfolio</h3>
+              <h3 class="masthead-brand">Portfolio</h3>
               <nav>
                 <ul class="nav masthead-nav">
-                  <li class="active"><a href="/">Home</a></li>
-                  <li><a href="#">About</a></li>
-                  <li><a href="#">Contact</a></li>
-                  <li><a href="#">Sign Up</a></li>
-                  <li><a href="#">Log In</a></li>
+                <li class="active"><a href="/">Home</a></li>
+                <li><a href="about">About</a></li>
+                <li><%= link_to "Register", new_user_registration_path unless user_signed_in? %> </li>
+                <li><%= link_to "Log In", new_user_session_path unless user_signed_in? %> </li>
+                <li><%= link_to "Log Out", destroy_user_session_path, :method => :delete if user_signed_in? %></li>
                 </ul>
               </nav>
             </div>
           </div>
 
           <div class="inner cover">
-            <h1 class="cover-heading">New Project</h1>
-
-            <%= render 'form', project: @project %>
-
-            <%= link_to 'Back', projects_path %>
+            <h1>Riley Staite</h1>
 
           </div>
+          <h6>Information about me and my master level skills. Just check out this sick rails application. Ahh yee.</h6>
+          <h5>Email:</h5>
+          <h5>Linkdin:</h5>
+          <h5>Github:</h5>
 
           <div class="mastfoot">
             <div class="inner">
