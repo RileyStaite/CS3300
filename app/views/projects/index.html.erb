@@ -55,21 +55,22 @@
           </div>
 
           <div class="inner cover">
-            <h1 class="cover-heading">Projects</h1>
+            <h2 class="cover-heading">Projects</h2>
+            <br>
             <% @projects.each do |project| %>
               <tr>
-              <div class="card bg-secondary text-white" style="width: 18rem;">
+              <div class="card bg-secondary text-light" style="width: 18rem;">
               <div class="card-body">
               <h5 class="card-title"><p class="lead"><td><%= project.title %></td></p></h5>
               <p class="card-text"><td><%= project.description %></td></p>
               <div class="btn btn-sm btn-dark ">
-                  <td><%= link_to 'Show', project %></td>
+                  <td><%= link_to 'More Info', project, class: "text-light" %></td>
                 </div>
                 <div class="btn btn-sm btn-dark">
-                <td><%= link_to 'Edit', edit_project_path(project) %></td>
+                <td><%= link_to 'Edit', edit_project_path(project), class: "text-light" %></td>
               </div>
               <div class="btn btn-sm btn-dark">
-                <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' }, class: "text-light" %></td>
               </div>
             
               </div>
@@ -85,7 +86,7 @@
             <% end %>
           </tbody>
           <br>
-          <br>
+
           <%= link_to 'New Project', new_project_path %>
           </div>
 
