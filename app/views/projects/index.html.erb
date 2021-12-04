@@ -55,12 +55,12 @@
           </div>
 
           <div class="inner cover">
-            <h2 class="cover-heading">Projects</h2>
+            <h2 class="cover-heading, text-light">Projects</h2>
             <br>
             <% @projects.each do |project| %>
               <tr>
               <div class="mx-auto" style="width: 285px;">
-              <div class="card bg-secondary text-light" style="width: 18rem;">
+              <div class="card bg-dark text-light" style="width: 18rem;">
               <div class="card-body">
               <h5 class="card-title"><p class="lead"><td><%= project.title %></td></p></h5>
               <p class="card-text"><td><%= project.description %></td></p>

@@ -30,12 +30,12 @@ html,
 body {
   height: 100%;
   
-  background-color: rgb(36, 36, 36);
+  background-color: rgb(0, 0, 0);
 }
 body {
   color: rgb(173, 173, 173);
   text-align: center;
-  text-shadow: 0 1px 3px rgba(46, 46, 46, 0.5);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -45,8 +45,10 @@ body {
   width: 100%;
   height: 100%; /* For at least Firefox */
   min-height: 100%;
-  -webkit-box-shadow: inset 0 0 100px rgba(0, 0, 0, .5);
-  box-shadow: inset 0 0 100px rgba(0, 0, 0, .5);
+  -webkit-box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
+    background-color: rgb(24, 24, 24);
+
 }
 .site-wrapper-inner {
 
@@ -70,6 +72,7 @@ body {
  */
 .masthead-brand {
   font-size: 32px;
+  color: rgb(117, 0, 0);
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -87,8 +90,8 @@ body {
   padding-left: 0;
   font-size: 16px;
   font-weight: 700;
-  color: rgb(63, 63, 63); /* IE8 proofing */
-  color: rgba(14, 14, 14, 0.75);
+  color: rgb(102, 102, 102); /* IE8 proofing */
+  color: rgba(255, 255, 255, 0.75);
   border-bottom: 2px solid transparent;
   margin-top: 10px;
 }
@@ -102,7 +105,7 @@ body {
 .masthead-nav > .active > a,
 .masthead-nav > .active > a:hover,
 .masthead-nav > .active > a:focus {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   border-bottom-color: rgb(49, 49, 49);
   margin-top: 10px;
 }
@@ -135,8 +138,8 @@ body {
  */
 
 .mastfoot {
-  color: rgb(128, 0, 0); /* IE8 proofing */
-  color: rgba(141, 0, 0, 0.5);
+  color: rgb(255, 0, 0); /* IE8 proofing */
+  color: rgba(182, 0, 0, 0.658);
 }
 
 
@@ -157,6 +160,8 @@ body {
   }
   .site-wrapper-inner {
     vertical-align: middle; /* Start the vertical centering */
+   /* color: rgb(117, 0, 0); */
+
   }
   .masthead,
   .mastfoot,

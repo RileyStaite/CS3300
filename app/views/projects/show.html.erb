@@ -54,21 +54,26 @@
             </nav>
           </div>
         </div>
+
+
+        <div class= "make light, text-light">
         <strong>Title:</strong>
         <%= @project.title %>
       </p>
       <p>
-<strong>Description:</strong>
+<h5>Description:</h5>
 <%= @project.description %>
 </p>
 <p>
 <strong>More Info:</strong>
 <%= @project.descriptionMore %>
 </p> 
+</div>
         <div class="inner cover">
-        <h1 class="cover-heading"><p>
+        <h1 class="cover-heading, text-light"><p>
         <%= link_to 'Edit', edit_project_path(@project) %> |
         <%= link_to 'Back', projects_path %></h1>
+        
         </tbody>
         
         </div>
