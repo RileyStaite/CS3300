@@ -59,6 +59,7 @@
             <br>
             <% @projects.each do |project| %>
               <tr>
+              <div class="mx-auto" style="width: 285px;">
               <div class="card bg-secondary text-light" style="width: 18rem;">
               <div class="card-body">
               <h5 class="card-title"><p class="lead"><td><%= project.title %></td></p></h5>
@@ -74,25 +75,20 @@
               </div>
             
               </div>
-          
+              </div>
               </div>
               <br>
-
-              
-                
-               
-                
                 </tr>
             <% end %>
           </tbody>
-          <br>
-
-          <%= link_to 'New Project', new_project_path %>
+          
           </div>
 
           <div class="mastfoot">
-          
             <div class="inner">
+              <%= link_to 'New Project', new_project_path %>
+              <br>
+              <br>
               <p>Portfolio by Riley Staite <a href="https://github.com/RileyStaite">Github</a></p>
             </div>
           </div>
