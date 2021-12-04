@@ -58,21 +58,24 @@
             <h1 class="cover-heading">Projects</h1>
             <% @projects.each do |project| %>
               <tr>
-              <div class="card" style="width: 18rem;">
+              <div class="card bg-secondary text-white" style="width: 18rem;">
               <div class="card-body">
               <h5 class="card-title"><p class="lead"><td><%= project.title %></td></p></h5>
               <p class="card-text"><td><%= project.description %></td></p>
-              <div class="btn btn-sm btn-default">
+              <div class="btn btn-sm btn-dark ">
                   <td><%= link_to 'Show', project %></td>
                 </div>
-                <div class="btn btn-sm btn-default">
+                <div class="btn btn-sm btn-dark">
                 <td><%= link_to 'Edit', edit_project_path(project) %></td>
               </div>
-              <div class="btn btn-sm btn-default">
+              <div class="btn btn-sm btn-dark">
                 <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
               </div>
+            
               </div>
+          
               </div>
+              <br>
 
               
                 

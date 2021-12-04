@@ -29,12 +29,12 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-color: rgb(83, 83, 83);
+  background-color: rgb(36, 36, 36);
 }
 body {
-  color: rgb(46, 46, 46);
+  color: rgb(173, 173, 173);
   text-align: center;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, .5);
+  text-shadow: 0 1px 3px rgba(46, 46, 46, 0.5);
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -87,14 +87,14 @@ body {
 .masthead-nav > li > a:hover,
 .masthead-nav > li > a:focus {
   background-color: transparent;
-  border-bottom-color: #4e4e4e;
-  border-bottom-color: rgba(255, 255, 255, .25);
+  border-bottom-color: #252525;
+  border-bottom-color: rgba(255, 255, 255, 0.25);
 }
 .masthead-nav > .active > a,
 .masthead-nav > .active > a:hover,
 .masthead-nav > .active > a:focus {
-  color: rgb(75, 75, 75);
-  border-bottom-color: rgb(58, 58, 58);
+  color: rgb(0, 0, 0);
+  border-bottom-color: rgb(49, 49, 49);
 }
 
 @media (min-width: 768px) {

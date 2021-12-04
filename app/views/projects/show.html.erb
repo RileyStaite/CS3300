@@ -54,25 +54,23 @@
             </nav>
           </div>
         </div>
-
-        <div class="inner cover">
-          <h1 class="cover-heading"><p>
-          <strong>Title:</strong>
-          <%= @project.title %>
-        </p>
-        <p>
-  <strong>Description:</strong>
-  <%= @project.description %>
-  </p>
-  <p>
-  <strong>More Info:</strong>
-  <%= @project.descriptionMore %>
+        <strong>Title:</strong>
+        <%= @project.title %>
+      </p>
+      <p>
+<strong>Description:</strong>
+<%= @project.description %>
 </p>
-
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %></h1>
-        
+<p>
+<strong>More Info:</strong>
+<%= @project.descriptionMore %>
+</p> 
+        <div class="inner cover">
+        <h1 class="cover-heading"><p>
+        <%= link_to 'Edit', edit_project_path(@project) %> |
+        <%= link_to 'Back', projects_path %></h1>
         </tbody>
+        
         </div>
         <div class="mastfoot">
           <div class="inner">
