@@ -61,18 +61,18 @@
               <div class="mx-auto" style="width: 285px;">
               <div class="card bg-dark text-light" style="width: 18rem;">
               <div class="card-body">
-              <h5 class="card-title"><p class="lead"><td><%= project.title %></td></p></h5>
+              <h5 class="card-title text-danger"><p class="lead"><td><%= project.title %></td></p></h5>
               <p class="card-text"><td><%= project.description %></td></p>
-              <div class="btn btn-sm btn-dark ">
-                  <td><%= link_to 'More Info', project, class: "text-light" %></td>
+
+              <div class="btn btn-link btn-primary btn-sm">
+                  <td><%= link_to 'More Info', project, class: "text-danger" %></td>
                 </div>
-                <div class="btn btn-sm btn-dark">
-                <td><%= link_to 'Edit', edit_project_path(project), class: "text-light" %></td>
+                <div class="btn btn-link btn-primary btn-sm">
+                <td><%= link_to 'Edit', edit_project_path(project), class: "text-danger" %></td>
               </div>
-              <div class="btn btn-sm btn-dark">
-                <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' }, class: "text-light" %></td>
+              <div class="btn btn-link btn-primary btn-sm">
+                <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' }, class: "text-danger" %></td>
               </div>
-            
               </div>
               </div>
               </div>
@@ -84,6 +84,7 @@
           </div>
 
           <div class="mastfoot">
+          
             <div class="inner">
               <%= link_to 'New Project', new_project_path %>
               <br>
