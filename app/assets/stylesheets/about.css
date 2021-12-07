@@ -138,8 +138,8 @@ body {
  */
 
 .mastfoot {
-  color: rgb(255, 0, 0); /* IE8 proofing */
-  color: rgba(182, 0, 0, 0.658);
+  color: rgb(255, 255, 255); /* IE8 proofing */
+  color: rgba(255, 255, 255, 0.658);
 }
 
 .black-background {background-color:#000000;}

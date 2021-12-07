@@ -63,7 +63,7 @@ body {
 
 /* Padding for spacing */
 .inner {
-  padding: 30px;
+  padding: 0px;
 }
 
 
@@ -139,7 +139,7 @@ body {
 
 .mastfoot {
   color: rgb(255, 0, 0); /* IE8 proofing */
-  color: rgba(182, 0, 0, 0.658);
+  color: rgba(201, 0, 0, 0.774);
 }
 
 .black-background {background-color:#000000;}
