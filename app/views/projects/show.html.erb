@@ -57,15 +57,15 @@
 
 
         <div class= "make light, text-light">
-        <h5>Title:</h5>
+        <h5 style="color:maroon;">Title:</h5>
         <%= @project.title %>
       </p>
 <p>
-<h5>Description:</h5>
+<h5 style="color:maroon;">Description:</h5>
 <%= @project.description %>
 </p>
 <p>
-<h5>More Info:</h5>
+<h5 style="color:maroon;">More Info:</h5>
 <%= @project.descriptionMore %>
 </p> 
 </div>
@@ -73,7 +73,6 @@
         <h1 class="cover-heading, text-light"><p>
         <%= link_to 'Edit', edit_project_path(@project) %> |
         <%= link_to 'Back', projects_path %></h1>
-        
         </tbody>
         
         </div>
