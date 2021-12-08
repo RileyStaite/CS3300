@@ -86,10 +86,6 @@
 
           <br>
           <%= link_to 'Destroy', @project, method: :delete, data: { confirm: 'Are you sure?' } if user_signed_in? %>
-
-          <br>
-          <%= link_to "Log Out", destroy_user_session_path, :method => :delete if user_signed_in? %>
-          <%= link_to "Log In", new_user_session_path unless user_signed_in? %>
           <br>
           <br>
             <p>Portfolio by Riley Staite <a href="https://github.com/RileyStaite">Github</a></p>
