@@ -83,10 +83,10 @@
           <div class="inner">
 
           <%= link_to 'Edit', edit_project_path(@project) if user_signed_in? %>
+
           <br>
-          <% @projects.each do |project| %>
-          <%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } if user_signed_in? %>
-          <% end %>
+          <%= link_to 'Destroy', @project, method: :delete, data: { confirm: 'Are you sure?' } if user_signed_in? %>
+
           <br>
           <%= link_to "Log Out", destroy_user_session_path, :method => :delete if user_signed_in? %>
           <%= link_to "Log In", new_user_session_path unless user_signed_in? %>
