@@ -55,14 +55,15 @@
           <div class="inner cover, text-light">
             <h1 class="cover-heading">Editing Project</h1>
             <%= render 'form', project: @project %>
-            <%= link_to 'Show', @project %> |
-            <%= link_to 'Back', projects_path %>
+            <%= link_to 'Back', @project %> |
+            <%= link_to 'Home', projects_path %>
             
 
           </div>
 
           <div class="mastfoot">
             <div class="inner">
+
             <%= link_to "Log Out", destroy_user_session_path, :method => :delete if user_signed_in? %>
             <%= link_to "Log In", new_user_session_path unless user_signed_in? %>
             <br>

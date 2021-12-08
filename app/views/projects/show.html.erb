@@ -52,7 +52,7 @@
           </div>
         </div>
 
-
+      
         <div class= "make light, text-light">
         <h5 align="left" style="color:maroon;">Title:</h5>
         <h6 align="left" ><%= @project.title %></h6>
@@ -73,14 +73,21 @@
 
 </div>
         <div class="inner cover">
-        <h1 class="cover-heading, text-light"><p>
-        <%= link_to 'Edit', edit_project_path(@project) %> |
+        <h1 class="cover-heading"><p>
         <%= link_to 'Back', projects_path %></h1>
+        </p>
         </tbody>
         
         </div>
         <div class="mastfoot">
           <div class="inner">
+
+          <%= link_to 'Edit', edit_project_path(@project) if user_signed_in? %>
+<br>
+          <% @projects.each do |project| %>
+          <%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } if user_signed_in? %>
+          <% end %>
+          <br>
           <%= link_to "Log Out", destroy_user_session_path, :method => :delete if user_signed_in? %>
           <%= link_to "Log In", new_user_session_path unless user_signed_in? %>
           <br>
