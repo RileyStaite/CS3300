@@ -47,9 +47,6 @@
               <ul class="nav masthead-nav">
               <li class="active"><a href="/">Home</a></li>
               <li><a href="/about">About</a></li>
-              <li><%= link_to "Register", new_user_registration_path unless user_signed_in? %> </li>
-              <li><%= link_to "Log In", new_user_session_path unless user_signed_in? %> </li>
-              <li><%= link_to "Log Out", destroy_user_session_path, :method => :delete if user_signed_in? %></li>
               </ul>
             </nav>
           </div>
@@ -84,6 +81,10 @@
         </div>
         <div class="mastfoot">
           <div class="inner">
+          <%= link_to "Log Out", destroy_user_session_path, :method => :delete if user_signed_in? %>
+          <%= link_to "Log In", new_user_session_path unless user_signed_in? %>
+          <br>
+          <br>
             <p>Portfolio by Riley Staite <a href="https://github.com/RileyStaite">Github</a></p>
           </div>
         </div>
