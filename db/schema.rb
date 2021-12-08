@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 2021_11_24_011138) do
     t.string "title"
     t.text "description"
     t.text "descriptionMore"
+    t.text "infoLink"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

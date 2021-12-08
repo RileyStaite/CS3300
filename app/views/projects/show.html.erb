@@ -58,16 +58,22 @@
 
         <div class= "make light, text-light">
         <h5 align="left" style="color:maroon;">Title:</h5>
-        <%= @project.title %>
+        <h6 align="left" ><%= @project.title %></h6>
       </p>
 <p>
 <h5 align="left" style="color:maroon;">Description:</h5>
-<%= @project.description %>
+<h6 align="left" ><%= @project.description %></h6>
 </p>
 <p>
 <h5 align="left" style="color:maroon;">More Info:</h5>
-<%= @project.descriptionMore %>
+<h6 align="left" ><%= @project.descriptionMore %></h6>
 </p> 
+
+<p>
+<h5 align="left" style="color:maroon;">Repository:</h5>
+<h6 align="left" ><%= @project.infoLink %></h6>
+</p> 
+
 </div>
         <div class="inner cover">
         <h1 class="cover-heading, text-light"><p>

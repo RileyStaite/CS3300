@@ -8,7 +8,7 @@
 a,
 a:focus,
 a:hover {
-  color: rgb(255, 0, 0);
+  color: rgb(134, 0, 0);
 }
 
 /* Custom default button */
@@ -17,8 +17,8 @@ a:hover {
 .btn-default.active {
   color: rgb(194, 0, 0);
   text-shadow: none; /* Prevent inheritance from `body` */
-  background-color: rgb(22, 22, 22);
-  border: 1px solid rgb(0, 0, 0);
+  background-color: rgb(117, 117, 117);
+  border: 1px solid rgb(122, 122, 122);
 }
 
 
@@ -29,11 +29,10 @@ a:hover {
 html,
 body {
   height: 100%;
-  
   background-color: rgb(0, 0, 0);
 }
 body {
-  color: rgb(173, 173, 173);
+  color: rgb(53, 53, 53);
   text-align: center;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
@@ -63,7 +62,7 @@ body {
 
 /* Padding for spacing */
 .inner {
-  padding: 0px;
+  padding: 10px;
 }
 
 
