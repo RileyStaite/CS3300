@@ -83,7 +83,7 @@
           <div class="inner">
 
           <%= link_to 'Edit', edit_project_path(@project) if user_signed_in? %>
-<br>
+          <br>
           <% @projects.each do |project| %>
           <%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } if user_signed_in? %>
           <% end %>
