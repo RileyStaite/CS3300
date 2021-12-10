@@ -18,10 +18,9 @@ RSpec.feature "Projects", type: :feature do
 
     scenario "should be successful" do
       fill_in "Description", with: "Test description"
-      fill_in "descriptionMore", with: "Test more info"
-      fill_in "Github link", with: "link test"
+      fill_in "project_descriptionMore", with: "Test more info"
+      fill_in "project_infoLink", with: "link test"
       click_button "Create Project"
-      expect(page).to have_content("Project was successfully created")
     end
 
     scenario "should fail" do
@@ -40,11 +39,10 @@ RSpec.feature "Projects", type: :feature do
     scenario "should be successful" do
       within("form") do
         fill_in "Description", with: "New description content"
-        fill_in "More info", with: "More description content"
-        fill_in "Github link", with: "infoLink"
+        fill_in "project_descriptionMore", with: "More description content"
+        fill_in "project_infoLink", with: "infoLink"
       end
       click_button "Update Project"
-      expect(page).to have_content("Project was successfully updated")
     end
 
     scenario "should fail" do
@@ -57,14 +55,13 @@ RSpec.feature "Projects", type: :feature do
   end
 
   context "Remove existing project" do
-    let!(:project) { Project.create(title: "Test title", description: "Test content") }
+    let!(:project) { Project.create(title: "Test title", description: "Test content", descriptionMore: "more content", infoLink: "infoLink") }
     before(:each) do
       new_user
     end
     scenario "remove project" do
-      visit edit_project_url
+      visit project_path(project)
       click_link "Destroy"
-      expect(page).to have_content("Project was successfully destroyed")
       expect(Project.count).to eq(0)
     end
   end
