@@ -52,7 +52,9 @@
           </div>
         </div>
 
-      
+        <% if flash[:notice] %>
+        <div id="notice"><%= flash[:notice] %></div>
+        <% end %>
         <div class= "make light, text-light">
         <h5 align="left" style="color:maroon;">Title:</h5>
         <h6 align="left" ><%= @project.title %></h6>

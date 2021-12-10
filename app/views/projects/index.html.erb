@@ -52,7 +52,9 @@
           </div>
 
           <div class="inner cover">
-
+          <% if flash[:notice] %>
+          <div id="notice"><%= flash[:notice] %></div>
+          <% end %>
             <% @projects.each do |project| %>
               <tr>
               <div class="mx-auto" style="width: 285px;">

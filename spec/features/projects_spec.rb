@@ -21,6 +21,7 @@ RSpec.feature "Projects", type: :feature do
       fill_in "project_descriptionMore", with: "Test more info"
       fill_in "project_infoLink", with: "link test"
       click_button "Create Project"
+      expect(page).to have_content("Project was successfully created")
     end
 
     scenario "should fail" do
@@ -43,6 +44,7 @@ RSpec.feature "Projects", type: :feature do
         fill_in "project_infoLink", with: "infoLink"
       end
       click_button "Update Project"
+      expect(page).to have_content("Project was successfully updated")
     end
 
     scenario "should fail" do
@@ -62,6 +64,7 @@ RSpec.feature "Projects", type: :feature do
     scenario "remove project" do
       visit project_path(project)
       click_link "Destroy"
+      expect(page).to have_content("Project was successfully destroyed")
       expect(Project.count).to eq(0)
     end
   end
