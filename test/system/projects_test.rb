@@ -16,6 +16,8 @@ class ProjectsTest < ApplicationSystemTestCase
 
     fill_in "Description", with: @project.description
     fill_in "Title", with: @project.title
+    fill_in "More info", with: @project.descriptionMore
+    fill_in "Github link", with: @project.infoLink
     click_on "Create Project"
 
     assert_text "Project was successfully created"
@@ -28,6 +30,8 @@ class ProjectsTest < ApplicationSystemTestCase
 
     fill_in "Description", with: @project.description
     fill_in "Title", with: @project.title
+    fill_in "More info", with: @project.descriptionMore
+    fill_in "Github link", with: @project.infoLink
     click_on "Update Project"
 
     assert_text "Project was successfully updated"

@@ -3,7 +3,7 @@ require "rails_helper"
 RSpec.describe Project, type: :model do
 
   context "validations tests" do
-    it "ensures the title is present" do
+    it "ensures the decription is present" do
       project = Project.new(description: "Content of the description")
       expect(project.valid?).to eq(false)
     end
@@ -13,8 +13,18 @@ RSpec.describe Project, type: :model do
       expect(project.valid?).to eq(false)
     end
     
+    it "ensures the decription more is present" do
+      project = Project.new(descriptionMore: "Content of the further description")
+      expect(project.valid?).to eq(false)
+    end
+
+    it "ensures the info link field is present" do
+      project = Project.new(infoLink: "Content of the info link")
+      expect(project.valid?).to eq(false)
+    end
+    
     it "should be able to save project" do
-      project = Project.new(title: "Title", description: "Some description content goes here")
+      project = Project.new(title: "Title", description: "Some description content goes here", descriptionMore: "Content of the further description", infoLink: "Content of the info link")
       expect(project.save).to eq(true)
     end
   end
@@ -30,7 +40,7 @@ RSpec.describe Project, type: :model do
   # ...
 
   context "scopes tests" do
-    let(:params) { { title: "Title", description: "some description" } }
+    let(:params) { { title: "Title", description: "some description", descriptionMore: "DescriptionMore", infoLink: "infoLink" } }
     before(:each) do
       Project.create(params)
       Project.create(params)
